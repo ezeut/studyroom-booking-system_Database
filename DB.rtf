@@ -1,131 +1,0 @@
-{\rtf1\ansi\ansicpg949\cocoartf2636
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset129 AppleSDGothicNeo-Regular;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
-
-\f0\fs24 \cf0 //database r_studyroom\
-\
-\
-//TABLE 
-\f1 \'bb\'fd\'bc\'ba
-\f0 \
-\
-create table member(\
-mid varchar(20) not null primary key,\
-mpw varchar(60) not null,\
-mname varchar(20) not null,\
-mtel varchar(15) not null);\
-\
-create table studyroom(\
-sname varchar(20) not null primary key,\
-stype varchar(20) not null,\
-scapacity varchar(10) not null);\
-\
-create table reservation(\
-rnum int not null auto_increment primary key,\
-mid varchar(20) not null,\
-sname varchar(20) not null,\
-rdate varchar(20) not null,\
-rtime varchar(10) not null,\
-foreign key(mid) references member(mid),\
-foreign key(sname) references studyroom(sname));\
-\
-create table r_check(\
-cnum int not null auto_increment primary key,\
-rnum int,\
-cstate varchar(20) null,\
-foreign key(rnum) references reservation(rnum));\
-\
-\
-\
-\
-\
-\
-// 4
-\f1 \'b0\'b3\'c0\'c7
-\f0  
-\f1 \'c5\'d7\'c0\'cc\'ba\'ed\'c0\'cc
-\f0  
-\f1 \'b8\'f0\'b5\'ce
-\f0  
-\f1 \'c1\'b6\'c0\'ce\'b5\'c7\'b4\'c2
-\f0  
-\f1 \'bf\'ac\'bb\'ea
-\f0  -> 
-\f1 \'bf\'b9\'be\'e0
-\f0  
-\f1 \'c1\'b6\'c8\'b8
-\f0  : 
-\f1 \'bf\'b9\'be\'e0\'c0\'da
-\f0  
-\f1 \'c1\'a4\'ba\'b8
-\f0 , 
-\f1 \'bf\'b9\'be\'e0\'c7\'d1
-\f0  
-\f1 \'bd\'ba\'c5\'cd\'b5\'f0
-\f0  
-\f1 \'b7\'eb\'c0\'c7
-\f0  
-\f1 \'c1\'a4\'ba\'b8
-\f0 , 
-\f1 \'bf\'b9\'be\'e0\'c1\'a4\'ba\'b8\'b8\'a6
-\f0  RESERVATION 
-\f1 \'c5\'d7\'c0\'cc\'ba\'ed\'bf\'a1\'bc\'ad
-\f0 \
-\
-\
-\
-\
-/*TABLE 
-\f1 \'bb\'e8\'c1\'a6
-\f0 */\
-\
-DROP TABLE reservation;\
-DROP TABLE member;\
-DROP TABLE studyroom;\
-DROP TABLE ...\
-\
-\
-/*
-\f1 \'c6\'a9\'c7\'c3
-\f0  
-\f1 \'c3\'df\'b0\'a1
-\f0 */\
-\
-// MEMBER 
-\f1 \'c5\'d7\'c0\'cc\'ba\'ed
-\f0 \
-INSERT INTO MEMBER VALUES(0, 'admin', '1714026', 'JIEUN', '01031241680');\
-\
-//STUDYROOM 
-\f1 \'c5\'d7\'c0\'cc\'ba\'ed
-\f0 \
-INSERT INTO STUDYROOM VALUES('a', 'a', '2');\
-INSERT INTO STUDYROOM VALUES('b', 'a', '2');\
-INSERT INTO STUDYROOM VALUES('c', 'b', '4');\
-INSERT INTO STUDYROOM VALUES('d', 'b', '4');\
-INSERT INTO STUDYROOM VALUES('e', 'b', '4');\
-INSERT INTO STUDYROOM VALUES('f', 'c', '6');\
-INSERT INTO STUDYROOM VALUES('g', 'c', '6');\
-INSERT INTO STUDYROOM VALUES('h', 'c', '6');\
-INSERT INTO STUDYROOM VALUES('i', 'c', '6');\
-INSERT INTO STUDYROOM VALUES('j', 'd', '10');\
-\
-\
-\
-//RESERVATION_DETAILS 
-\f1 \'c5\'d7\'c0\'cc\'ba\'ed
-\f0 \
-IN
-\f1 \'bf\'c0\'c8\'c4
-\f0  1:31 2021-05-2ISERT INTO RESERVATION_DETAILS VALUES(0, '
-\f1 \'b3\'af\'c2\'a5
-\f0 ', '
-\f1 \'bd\'c3\'b0\'a3
-\f0 ', '
-\f1 \'bf\'b9\'be\'e0\'c0\'ce\'bf\'f8
-\f0 ');\
-\
-}
